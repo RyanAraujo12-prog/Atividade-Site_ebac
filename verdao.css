@@ -47,3 +47,71 @@ header .container{
     justify-content: space-between;
     align-items: center;
 }
+
+.jogador img{
+    width: 180px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.historia{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+footer {
+    background-color: #026422;
+    color: #FFF;
+    padding: 24px 0;
+    margin-top: 40px;
+}
+
+footer p{
+    margin: 8px 0;
+}
+
+section{
+    padding: 40px 20px;
+}
+
+#contato .container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contato form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+#contato input,
+#contato textarea{
+    padding:12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+form textarea{
+    resize: none;
+    height: 180px;
+}
+
+#contato button{
+    background-color: #026422;
+    color: #FFF;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-style: normal;
+}
+
+#contato button:hover{
+    background-color: #038c30;
+}

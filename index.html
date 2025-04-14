@@ -17,8 +17,9 @@
             <ul>
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#jogadores">Jogadores</a></li>
-                <li><a href="#">Técnico</a></li>
-                <li><a href="#">História</a></li>
+                <li><a href="#tecnico">Técnico</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
         </div>
@@ -34,33 +35,71 @@
                 <p>Felipe Anderson "destrava" e começa a render bem em jogos.</p>
             </div>
         </div>
+        <br />
     </section>
     <section id="jogadores">
-        <h2>Jogadores</h2>
         <div class="container">
-            <div>
+            <div class="jogador">
+                <h2>Jogadores</h2>
                 <img src="./images/jogador1.jpg" alt="Jogador 1">
                 <h3>Vitor Roque</h3>
                 <p>Posição: Atacante</p>
                 <p>Idade: 19 anos</p>
-            </div>
-            <div>
                 <img src="./images/jogador2.jpg" alt="Jogador 2">
                 <h3>Paulinho</h3>
                 <p>Posição: Ponta-Esquerda/Atacante</p>
                 <p>Idade: 24 anos</p>
+                <br />
+                <p>Novos reforços chegam ao elenco do Verdão: Paulinho e Vitor Roque! Duas grandes contratações</p>
             </div>
-            <p>Novos reforços chegam ao elenco do Verdão: Paulinho e Vitor Roque! Duas grandes contratações</p>
         </div>
     </section>
+ 
     <section id="tecnico">
-        <h2>Técnico</h2>
         <div class="container">
-            <img src="./images/tecnico.jpg" alt="Técnico do Palmeiras">
-            <h3>Abel Ferreira</h3>
-            <p>Idade: 46 anos</p>
-            <p>Fernando Diniz é o atual técnico do Palmeiras, conhecido por seu estilo de jogo ofensivo e inovador.</p>
+            <div class="jogador">
+                <h2>Técnico</h2>
+                <img src="./images/tecnico.jpg" alt="Técnico do Palmeiras">
+                <h3>Abel Ferreira</h3>
+                <p>Idade: 46 anos</p>
+                <p>Abel Ferreira é o atual técnico do Palmeiras, conhecido por seu estilo de jogo ofensivo e inovador.</p>
+            </div>
         </div>
     </section>
+ 
+    <section id="historia">
+        <div class="container">
+            <div class="jogador">
+                <h2>História do Palmeiras</h2>
+                <img src="./images/historia.jpg" alt="História do Palmeiras" class="historia">
+                <p>O Palmeiras foi fundado em 26 de agosto de 1914 e é um dos clubes mais vitoriosos do Brasil, com uma rica história de conquistas e tradições.</p>
+                <p>O clube é conhecido por sua torcida apaixonada e por suas grandes rivalidades, especialmente com o Corinthians.</p>
+                <p>O Palmeiras já conquistou diversos títulos, incluindo a Copa do Mundo de Clubes da FIFA e a Copa Libertadores.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <div class="container">
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Nos atualize:</label>
+                <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Informações do meu Verdão - Todos os direitos reservados.</p>
+            <p>Desenvolvido por Ryan Araujo</p>
+            <p>*SITE TESTE*</p>
+        </div>
+    </footer>
 </body>
 </html>
