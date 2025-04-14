@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header,
+section h2,
+section h3,
+form button{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body, input, textarea{
+    font-family: "Roboto", sans-serif;
+}
+
+header{
+    padding: 16px 0;
+    background-color: #026422;
+    color: #FFF;
+}
+
+header nav li{
+    display: inline;
+    margin-left: 16px;
+    list-style: none;
+    font-size: 18px;
+}
+
+header nav li a{
+    text-decoration: none;
+    color: #ff0000;
+}
+
+.palmeiras,
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
