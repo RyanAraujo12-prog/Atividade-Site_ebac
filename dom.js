@@ -25,4 +25,48 @@ document.addEventListener('DOMContentLoaded', () => {
         botao.style.transition = '0.2s';
     });
 });
+const botaoTema = document.querySelector('#toggle-tema');
+botaoTema.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('modo', document.body.classList.contains('dark') ? 'dark' : 'light');
+});
+
+// Lembrar escolha
+window.addEventListener('DOMContentLoaded', () => {
+    const modo = localStorage.getItem('modo');
+    if (modo === 'dark') document.body.classList.add('dark');
+});
+const botaoIdioma = document.querySelector('#toggle-idioma');
+let idiomaAtual = 'br';
+
+botaoIdioma.addEventListener('click', () => {
+    idiomaAtual = idiomaAtual === 'br' ? 'en' : 'br';
+    alternarIdioma(idiomaAtual);
+});
+
+function alternarIdioma(lang) {
+    const traducoes = {
+        en: {
+            titulo: 'My Verdão Info',
+            bemVindo: 'Welcome to our Verdão fan site!',
+            noticia: 'Paulinho debuts against Corinthians.',
+            contato: 'Contact',
+            enviar: 'Send'
+        },
+        br: {
+            titulo: 'Informações do meu Verdão',
+            bemVindo: 'Bem vindo ao site de fãs do nosso verdão!',
+            noticia: 'Paulinho acaba de fazer estreia em jogo contra o Corinthians.',
+            contato: 'Contato',
+            enviar: 'Enviar'
+        }
+    };
+
+    const t = traducoes[lang];
+    document.querySelector('h1').textContent = t.titulo;
+    document.querySelector('#inicio h2').textContent = t.bemVindo;
+    document.querySelector('#inicio p').textContent = t.noticia;
+    document.querySelector('#contato h2').textContent = t.contato;
+    document.querySelector('#contato button').textContent = t.enviar;
+}
 

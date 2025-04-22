@@ -163,3 +163,47 @@ form textarea {
 #topoBtn:hover {
     background-color: #038c30;
 }
+
+body.dark {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark header,
+body.dark footer {
+    background-color: #1f1f1f;
+}
+
+body.dark a {
+    color: #0f0;
+}
+
+#toggle-tema {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .jogador img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #contato .container {
+        width: 90%;
+    }
+}
+
