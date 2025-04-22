@@ -207,3 +207,6 @@ body.dark a {
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
