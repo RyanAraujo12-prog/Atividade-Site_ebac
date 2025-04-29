@@ -210,3 +210,41 @@ body.dark a {
 html {
     scroll-behavior: smooth;
 }
+
+body.dark {
+    background: linear-gradient(to bottom, #1c1c1c, #121212);
+    color: #e0e0e0;
+}
+
+body.dark header,
+body.dark footer {
+    background-color: #1f1f1f;
+}
+
+body.dark a {
+    color: #90ee90;
+}
+
+body.dark a:hover {
+    color: #fff;
+    border-bottom: 2px solid #90ee90;
+}
+
+body.dark .jogador {
+    background-color: #2a2a2a;
+}
+
+body.dark input,
+body.dark textarea {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+body.dark #contato button {
+    background-color: #038c30;
+}
+
+body.dark #contato button:hover {
+    background-color: #0bb140;
+}
