@@ -84,4 +84,57 @@ function alternarIdioma(lang) {
         noticiaExtra.textContent = t.noticiaExtra;
     }
 }
+    const topoBtn = document.createElement('button');
+    topoBtn.id = 'topoBtn';
+    topoBtn.textContent = '↑';
+    document.body.appendChild(topoBtn);
 
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            topoBtn.style.display = 'block';
+        } else {
+            topoBtn.style.display = 'none';
+        }
+    });
+
+    topoBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    const imagens = document.querySelectorAll('.jogador img');
+
+    function mostrarImagens() {
+        imagens.forEach(img => {
+            if (img.getBoundingClientRect().top < window.innerHeight) {
+                img.classList.add('visible');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', mostrarImagens);
+    mostrarImagens();
+    const form = document.querySelector('#contato form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nome = document.querySelector('#nome').value;
+        const email = document.querySelector('#email').value;
+        const mensagem = document.querySelector('#mensagem').value;
+        
+        localStorage.setItem('mensagemContato', JSON.stringify({ nome, email, mensagem }));
+    
+        alert('Mensagem salva! (mesmo offline)');
+    });
+    const noticiasDinamicas = [
+        "Gustavo Gómez marca gol decisivo!",
+        "Palmeiras planeja nova contratação para 2025!",
+        "Novo uniforme será lançado na próxima semana."
+    ];
+    
+    const secaoInicio = document.querySelector('#inicio div');
+    
+    noticiasDinamicas.forEach(noticia => {
+        const p = document.createElement('p');
+        p.textContent = noticia;
+        p.style.color = '#026422';
+        secaoInicio.appendChild(p);
+    });
+            
