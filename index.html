@@ -95,6 +95,78 @@
             </form>
         </div>
     </section>
+    <!-- Adiciona isso dentro da tag <body> -->
+
+<!-- Seção de Login -->
+<section id="login">
+  <div class="container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="usuario">Usuário:</label>
+      <input type="text" id="usuario" required>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+</section>
+
+<!-- Seção de Grade de Conteúdos -->
+<section id="grade">
+  <div class="container">
+    <h2>Grade de Conteúdos</h2>
+    <div class="grade-conteudo">
+      <div class="card">
+        <h3>Elenco Atual</h3>
+        <p>Conheça todos os jogadores do time principal.</p>
+      </div>
+      <div class="card">
+        <h3>História</h3>
+        <p>Relembre os títulos e conquistas do Verdão.</p>
+      </div>
+      <div class="card">
+        <h3>Galeria de Ídolos</h3>
+        <p>Veja os craques que marcaram época.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção de Suporte -->
+<section id="suporte">
+  <div class="container">
+    <h2>Suporte</h2>
+    <form id="suporte-form">
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<!-- Seção de Configurações -->
+<section id="configuracoes">
+  <div class="container">
+    <h2>Configurações</h2>
+    <label>
+      <input type="checkbox" id="tema-toggle">
+      Modo escuro
+    </label>
+  </div>
+</section>
+<!-- Dentro da tag <nav> -->
+<ul>
+  <li><a href="#inicio">Início</a></li>
+  <li><a href="#jogadores">Jogadores</a></li>
+  <li><a href="#tecnico">Técnico</a></li>
+  <li><a href="#historia">História</a></li>
+  <li><a href="#grade">Conteúdos</a></li>
+  <li><a href="#contato">Contato</a></li>
+  <li><a href="#login">Login</a></li>
+  <li><a href="#suporte">Suporte</a></li>
+  <li><a href="#configuracoes">Configurações</a></li>
+</ul>
+
 
     <footer>
         <div class="container">
@@ -102,6 +174,7 @@
             <p>Desenvolvido por Ryan Araujo</p>
             <p>*SITE TESTE*</p>
         </div>
+        
     </footer>
     <script src="script.js"></script>
 </body>

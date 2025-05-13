@@ -137,4 +137,107 @@ function alternarIdioma(lang) {
         p.style.color = '#026422';
         secaoInicio.appendChild(p);
     });
+
+    // dom.js
+
+// Scroll suave já ativado via CSS
+
+// Carrossel de jogadores
+const slides = document.querySelectorAll('.slide');
+let slideAtual = 0;
+
+function mostrarSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = 'none';
+    });
+    if (slides[index]) {
+        slide.style.display = 'block';
+    }
+}
+
+if (slides.length > 0) {
+    mostrarSlide(slideAtual);
+
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            slideAtual = (slideAtual - 1 + slides.length) % slides.length;
+            mostrarSlide(slideAtual);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            slideAtual = (slideAtual + 1) % slides.length;
+            mostrarSlide(slideAtual);
+        });
+    }
+}
+
+// Boas-vindas com nome do torcedor
+window.addEventListener('load', () => {
+    let nome = localStorage.getItem('nome');
+    if (!nome) {
+        nome = prompt('Qual seu nome, torcedor?');
+        if (nome) {
+            localStorage.setItem('nome', nome);
+        }
+    }
+    if (nome) {
+        const mensagem = document.createElement('p');
+        mensagem.textContent = `Bem-vindo, ${nome}! Avanti Palestra!`;
+        const inicioSection = document.querySelector('#inicio');
+        if (inicioSection) {
+            inicioSection.appendChild(mensagem);
+        }
+    }
+
+    // Contador de visitas
+    let visitas = localStorage.getItem('visitas') || 0;
+    visitas++;
+    localStorage.setItem('visitas', visitas);
+
+    const contador = document.createElement('p');
+    contador.textContent = `Essa é sua visita nº ${visitas}`;
+    const contatoSection = document.querySelector('#contato');
+    if (contatoSection) {
+        contatoSection.appendChild(contador);
+    }
+});
+
+// Login simples (fake login para demonstração)
+const loginForm = document.querySelector('#login-form');
+if (loginForm) {
+    loginForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const usuario = document.querySelector('#usuario').value;
+        const senha = document.querySelector('#senha').value;
+        if (usuario === 'verdao' && senha === 'campeaoverde') {
+            alert('Login realizado com sucesso!');
+        } else {
+            alert('Usuário ou senha incorretos.');
+        }
+    });
+}
+
+// Suporte: mostra alerta ao enviar mensagem
+const suporteForm = document.querySelector('#suporte-form');
+if (suporteForm) {
+    suporteForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Sua mensagem foi enviada ao suporte! Obrigado por entrar em contato.');
+        suporteForm.reset();
+    });
+}
+
+// Configurações: tema claro/escuro
+document.addEventListener('DOMContentLoaded', () => {
+    const temaToggle = document.querySelector('#tema-toggle');
+    if (temaToggle) {
+        temaToggle.addEventListener('change', function () {
+            document.body.classList.toggle('dark-theme', this.checked);
+        });
+    }
+});
+
             
